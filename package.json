@@ -22,5 +22,9 @@
     "codeceptjs": "^3.0.7",
     "playwright": "^1.12.2",
     "testcafe": "^1.14.2"
+  },
+  "dependencies": {
+    "config": "^3.3.6",
+    "faker": "^5.5.3"
   }
 }
