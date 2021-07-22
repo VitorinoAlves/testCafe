@@ -5,4 +5,6 @@ Feature: Business rules
 
   @important
   Scenario: do something 
-    Given I have a defined step
+    Given a user on the home page
+    When the user selects menu option Teste
+    Then the user views the Teste page

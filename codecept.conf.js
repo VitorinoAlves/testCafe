@@ -16,8 +16,7 @@ exports.config = {
   hooks: [],
   gherkin: {
     features: './features/*.feature',
-    steps: ['./step_definitions/steps.js',
-      './step_definitions/givenSteps.js',
+    steps: ['./step_definitions/givenSteps.js',
       './step_definitions/whenSteps.js',
       './step_definitions/thenSteps.js']
   },
