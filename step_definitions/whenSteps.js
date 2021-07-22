@@ -1,5 +1,5 @@
-const { I } = inject();
+const { I, homePage } = inject();
 
 When('the user selects menu option Teste', () => {
-    I.click('a[href="https://avaliacao.dextra.tech/teste/"]');
+    I.click(homePage.mainMenu.teste);
 });
