@@ -9,7 +9,8 @@ exports.config = {
   },
   include: {
     I: './steps_file.js',
-    homePage: './pages/home.js'
+    homePage: './pages/home.js',
+    pesquisaPage: './pages/pesquisa.js'
   },
   mocha: {},
   bootstrap: null,

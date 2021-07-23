@@ -9,6 +9,7 @@ Feature: Business rules
     When the user selects menu option Teste
     Then the user views the Teste page
 
+  @working
   Scenario: Send the research with valid data
     Given a user on the pesquisa page
     When the user fulfill the form
