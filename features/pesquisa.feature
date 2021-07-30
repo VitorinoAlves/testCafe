@@ -9,7 +9,7 @@ Feature: Business rules
     When the user selects menu option Teste
     Then the user views the Teste page
 
-  @working
+  
   Scenario: Send the research with valid data
     Given a user on the pesquisa page
     When the user fulfill the form
@@ -28,12 +28,19 @@ Feature: Business rules
       | Email             |
       | Confirmar Email   |
 
-  Scenario: Send the research with an invalid email address 
+  @working
+  Scenario Outline: Send the research with an invalid email address 
     Given a user on the pesquisa page
-    When the user fulfill the form with an invalid email address
+    When the user fulfill the form with an invalid email address "<email>"
     And send the research
     Then the user views an alert message about the invalid email
+    Examples:
+      | email                       |
+      | teste@.com                  |
+      | teste@test                  |
+      | teste.gmail.com             |
 
+  
   Scenario: Send the research with different email address 
     Given a user on the pesquisa page
     When the user fulfill the form with different email address
