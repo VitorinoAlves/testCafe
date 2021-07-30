@@ -6,7 +6,7 @@ When('the user selects menu option Teste', () => {
     I.click(homePage.mainMenu.teste);
 });
 
-When('the user fulfill the form', () => {
+When('the user fulfill the form', async () => {
     I.fillField(pesquisaPage.nameField, faker.name.firstName());
     I.fillField(pesquisaPage.lastNameField, faker.name.lastName());
     const email = faker.internet.email();
@@ -14,6 +14,17 @@ When('the user fulfill the form', () => {
     I.fillField(pesquisaPage.confirmEmailField, email);
     I.fillField(pesquisaPage.telefoneField, faker.phone.phoneNumber());
     I.checkOption(pesquisaPage.age[faker.datatype.number({ 'min': 0, 'max': 4 })]);
+    I.click(pesquisaPage.tempoExperiancia);
+    I.click(pesquisaPage.tempoExperienciaOpcoes[faker.datatype.number({ 'min': 0, 'max': 2 })]);
+    for (let i = 0; i < faker.datatype.number({ 'min': 1, 'max': 4 }); i++) {
+        I.click(pesquisaPage.tiposTestes[faker.datatype.number({ 'min': 0, 'max': 4 })])
+    }
+    I.fillField(pesquisaPage.linProgramacao, faker.lorem.sentence());
+    const randomNumber = faker.datatype.number({ 'min': 1, 'max': 10 });
+    await I.executeScript((rangeLocator, value) => {
+        var range = document.querySelector(rangeLocator);
+        range.setAttribute("value", value);
+    }, pesquisaPage.xpRange, randomNumber);
 });
 
 When('send the research', () => {

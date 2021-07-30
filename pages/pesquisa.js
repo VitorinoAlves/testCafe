@@ -18,4 +18,20 @@ module.exports = {
     ageThirdOption: '//label[text()="31 - 40"]/../input',
     ageFourthOption: '//label[text()="41 - 50"]/../input',
     ageFifthOption: '//label[text()="50+"]/../input',
+    tempoExperiancia: '.choices__inner',
+    tempoExperienciaOpcoes: [
+        'div[data-id="2"]',
+        'div[data-id="3"]',
+        'div[data-id="4"]'
+    ],
+    tiposTestes: [
+        '[value="Funcionais Web"]',
+        '[value="Funcionais Mobile"]',
+        '[value="API"]',
+        '[value="Unitário"]',
+        '[value="CI/CD"]'
+    ],
+    linProgramacao: 'input[placeholder="Ex.: Java, JavaScript, Python ..."]',
+    xpRange: 'input[type="range"]',
+    xpSelectedValue: 'div[data-hint="Selected Value: {value}"],b'
 }
