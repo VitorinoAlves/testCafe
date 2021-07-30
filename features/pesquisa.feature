@@ -9,13 +9,14 @@ Feature: Business rules
     When the user selects menu option Teste
     Then the user views the Teste page
 
-  
+  @automated
   Scenario: Send the research with valid data
     Given a user on the pesquisa page
     When the user fulfill the form
     And send the research
     Then the user views the success message recording the research data
 
+  @automated
   Scenario Outline: Send the research with empty mandatory fields 
     Given a user on the pesquisa page
     When the user fulfill the form lefting the "<field>" empty
@@ -28,7 +29,7 @@ Feature: Business rules
       | Email             |
       | Confirmar Email   |
 
-  @working
+  @automated
   Scenario Outline: Send the research with an invalid email address 
     Given a user on the pesquisa page
     When the user fulfill the form with an invalid email address "<email>"
@@ -40,7 +41,7 @@ Feature: Business rules
       | teste@test                  |
       | teste.gmail.com             |
 
-  
+  @automated
   Scenario: Send the research with different email address 
     Given a user on the pesquisa page
     When the user fulfill the form with different email address

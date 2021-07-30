@@ -18,4 +18,8 @@ Then('the user views an alert message about the invalid email', () => {
     I.see('Please enter a valid email address.');
 });
 
+Then('the user views an alert message about the empty mandatory fields', () => {
+    I.see('This field is required.');
+});
+
 
