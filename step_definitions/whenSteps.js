@@ -28,5 +28,5 @@ When('the user fulfill the form', async () => {
 });
 
 When('send the research', () => {
-
+    I.click(pesquisaPage.sendButton);
 });

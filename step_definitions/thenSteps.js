@@ -1,4 +1,4 @@
-const { I } = inject();
+const { I, pesquisaPage } = inject();
 const faker = require('faker');
 
 Then('the user views the Teste page', () => {
@@ -7,5 +7,5 @@ Then('the user views the Teste page', () => {
 });
 
 Then('the user views the success message recording the research data', () => {
-
+    I.see(pesquisaPage.successMessage.message);
 });

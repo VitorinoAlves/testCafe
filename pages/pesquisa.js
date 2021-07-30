@@ -33,5 +33,10 @@ module.exports = {
     ],
     linProgramacao: 'input[placeholder="Ex.: Java, JavaScript, Python ..."]',
     xpRange: 'input[type="range"]',
-    xpSelectedValue: 'div[data-hint="Selected Value: {value}"],b'
+    xpSelectedValue: 'div[data-hint="Selected Value: {value}"],b',
+    sendButton: 'button[type="submit"]',
+    successMessage: {
+        locator: '//p',
+        message: 'Obrigado por responder nossa pesquisa. Agradecemos sua participação!'
+    }
 }
