@@ -5,6 +5,9 @@ exports.config = {
       url: 'https://avaliacao.dextra.tech/',
       browser: 'chrome',
       show: true
+    },
+    Mochawesome: {
+      uniqueScreenshotNames: "true"
     }
   },
   include: {
@@ -12,7 +15,11 @@ exports.config = {
     homePage: './pages/home.js',
     pesquisaPage: './pages/pesquisa.js'
   },
-  mocha: {},
+  mocha: {
+    "reporterOptions": {
+      "reportDir": "report"
+    }
+  },
   bootstrap: null,
   teardown: null,
   hooks: [],
