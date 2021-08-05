@@ -4,7 +4,7 @@ exports.config = {
     TestCafe: {
       url: 'https://avaliacao.dextra.tech/',
       browser: 'chrome',
-      show: true
+      show: false
     },
     Mochawesome: {
       uniqueScreenshotNames: "true"
